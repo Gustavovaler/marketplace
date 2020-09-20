@@ -38,8 +38,8 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('id_cuenta')->nullable();
             $table->string('avatar')->nullable();
             $table->string('email')->unique();
-            $table->string('email_secundario');
-            $table->string('nick_usuario')->unique();
+            $table->string('email_secundario')->nullable();
+            $table->string('nick_usuario')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
