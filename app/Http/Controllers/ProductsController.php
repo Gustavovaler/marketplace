@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Product;
-
+use App\User;
 
 class ProductsController extends Controller
 {
@@ -55,7 +55,9 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('products.show', compact('product'));
+        $seller = User::find($product->seller_id);
+        
+        return view('products.show', compact('product','seller'));
     }
 
     /**

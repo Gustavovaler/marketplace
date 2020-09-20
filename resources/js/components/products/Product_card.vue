@@ -1,6 +1,6 @@
 <template>
     <div class="card efect" style="width: 14rem;">
-    <img class="card-img-top" src="/images/marcos.jpg" alt="Card image cap">
+    <a v-bind:href="product_id"><img class="card-img-top" src="/images/marcos.jpg" alt="Card image cap"></a>
     <div class="card-body">
         <h5 class="card-title">{{name}}</h5>
         <p class="card-text">{{texto}}....</p>
@@ -29,6 +29,9 @@ export default {
 
 <style scoped>
 .price{
-    text-align: right;
+    text-align: right;    
+}
+.efect{
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);
 }
 </style>
