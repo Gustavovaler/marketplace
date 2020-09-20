@@ -6,9 +6,11 @@
         @foreach ($products as $product)
          <div class="col-md-3 mb-1">
             <product-card
-             name="{{$product->product_name}}"
-             description = "{{$product->description}}"
-             > </product-card>
+            name="{{$product->product_name}}"
+            description = "{{$product->description}}"
+            price = "{{$product->price}}"
+            product_id = "/products/{{$product->id}}"
+            > </product-card>
          </div>  
         @endforeach      
 
