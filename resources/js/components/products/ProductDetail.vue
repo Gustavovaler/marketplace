@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container">
+        <div class="container mt-2">
             <!-- MAIN ROW -->
             <div class="row">
                <!-- LEFT COLUMN -->

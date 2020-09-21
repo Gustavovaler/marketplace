@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/extra_styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -42,6 +43,15 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('products.create')}}">Vender</a>
+                        </li>
+                        <li >
+                            <!-- Search form -->
+                                <div class="active-pink-7 ">
+                                  
+                                    <input class="form-control form-search" type="text" placeholder="Buscar" aria-label="Search">
+                                    
+                                </div>
+                            <!-- Search form -->
                         </li>
                         
                     </ul>

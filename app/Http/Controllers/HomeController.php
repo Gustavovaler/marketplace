@@ -19,7 +19,7 @@ class HomeController extends Controller
         $products_raw = Product::all();
         $products = [];
         // elijo numeros de productos al azar en cada request
-        for ($i=0; $i < 4; $i++) { 
+        for ($i=0; $i < 5; $i++) { 
            $n = rand(1, count($products_raw)-1);
         //    cotejo que el numero no este repetido
            if (in_array($n, $numbers)) {

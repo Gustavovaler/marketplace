@@ -36,7 +36,7 @@ class ProductsController extends Controller
         else
         {
             
-            return redirect('/login?redirect_to=products.create');
+            return redirect('/login?redirect_to=/products/create');
         }
     }
 
@@ -48,7 +48,21 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Product();
+        $producto->product_name = $request->input('titulo');
+        $producto->description = $request->input('descripcion');
+        $producto->quantity = $request->input('cantidad');
+        $producto->image1 = $request->input('imagen1');
+        $producto->image2 = $request->input('imagen2');
+        $producto->price = $request->input('precio');
+        $producto->is_new = $request->input('condicion');
+        $producto->marca = $request->input('marca');
+        $producto->modelo = $request->input('modelo');
+        $producto->origen = $request->input('origen');
+        $producto->seller_id = Auth::id();
+        $producto->save();
+        
+        return redirect('/');
     }
 
     /**
