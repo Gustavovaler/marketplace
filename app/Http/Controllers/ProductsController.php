@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Product;
 use App\User;
+use App\Localidad;
+use App\Provincia;
+
 
 class ProductsController extends Controller
 {
@@ -16,7 +19,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+       return view('products.index');
     }
 
     /**
@@ -27,11 +30,13 @@ class ProductsController extends Controller
     public function create()
     {
         if (Auth::check()) {
+            
             return view('products.create');
         }
         else
         {
-            return redirect('login');
+            
+            return redirect('/login?redirect_to=products.create');
         }
     }
 
@@ -56,8 +61,10 @@ class ProductsController extends Controller
     {
         $product = Product::find($id);
         $seller = User::find($product->seller_id);
+        $provincia = Provincia::find($seller->id_provincia);
+        $localidad = Localidad::find($seller->localidad);
         
-        return view('products.show', compact('product','seller'));
+        return view('products.show', compact('product','seller', 'provincia', 'localidad'));
     }
 
     /**

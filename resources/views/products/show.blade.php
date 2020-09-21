@@ -12,6 +12,8 @@
          created = "{{$product->created_at}}"
          is_new = "{{$product->is_new}}"
          seller = "{{$seller}}"
+         provincia = "{{$provincia->nombre}}"
+         localidad ="{{$localidad->nombre}}"
 ></product-detail>
     
 @endsection

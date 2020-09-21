@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div>
+    <img src="{{asset('/images/banner1.jpg')}}" alt="" style="margin: 0; width= 100%;" class="mb-3">
+</div>
 <div class="container">
     <div class="row">
         @foreach ($products as $product)
@@ -10,6 +13,7 @@
             description = "{{$product->description}}"
             price = "{{$product->price}}"
             product_id = "/products/{{$product->id}}"
+            image = "{{$product->image1}}"
             > </product-card>
          </div>  
         @endforeach      
