@@ -22,3 +22,5 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('/products', 'ProductsController');
+
+Route::get('/utils/{provincia}', 'UtilsController@get_localidades');
