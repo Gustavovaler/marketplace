@@ -64,7 +64,7 @@
                                 <select name="provincia" id="provincias" class="form-search" >
                                     <option disabled selected>Selecciona Provincia</option>
                                     @foreach ($provincias as $provincia)
-                                      <option value="{{$provincia->nombre}}">{{$provincia->nombre}}</option> 
+                                      <option value="{{$provincia->nombre}},{{$provincia->id}}" >{{$provincia->nombre}}</option> 
                                     @endforeach
                                 </select>
                                
@@ -87,6 +87,27 @@
 
                             <div class="col-md-6">
                                 <input id="calle" type="text" name="calle" class="form-control form-search " required >
+                            </div>
+                        </div>
+                        {{-- ------------------NUMERO DE PUERTA----------- --}}
+                        <div class="form-group row">
+                            <label for="numero_puerta" class="col-md-4 col-form-label text-md-right">Numero</label>
+
+                            <div class="col-md-2">
+                                <input id="numero_puerta" type="number" name="numero_puerta" class="form-control form-search " required >
+                            </div>
+                            <label for="" class="col-form-label">Piso/Dpto</label>
+                            <div class="col-md-2">
+                                
+                                <input id="departamento" type="text" name="departamento" class="form-control form-search " required >
+                            </div>
+                        </div>
+                        {{-- --------------CAMPO TELEFONO------------------ --}}
+                        <div class="form-group row">
+                            <label for="telefono" class="col-md-4 col-form-label text-md-right">Teléfono</label>
+
+                            <div class="col-md-6">
+                                <input id="telefono" type="number" name="telefono" class="form-control form-search " required >
                             </div>
                         </div>
                         {{-- --------------------------CAMPO PASSWORD----------------------- --}}
@@ -133,7 +154,7 @@ window.onload = function(){
     $("#ciudad").hide();
     $("#provincias").change(function(){
         $.ajax({            
-            url: "/utils/" + $(this).val(),
+            url: "/utils/" + $(this).val().split(',')[0],
             method: 'GET',
             success: function(data) {
                 $('#ciudad').html(data.html+"<option value='Otro'>Otro</option>");    
