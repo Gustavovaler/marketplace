@@ -15,8 +15,8 @@
                             <img v-bind:src="image1" alt="" class="img-center">
                         </div>
                         <div class="col-md-6">
-                            <span class="badge badge-secondary">Marca </span> Samsung<br>
-                            <span class="badge badge-secondary">Condicion </span> Nuevo<br>
+                            <span class="badge badge-secondary">Marca </span> {{marca}}<br>
+                            <span class="badge badge-secondary">Condicion </span><span v-if="is_new == 0 "> Usado</span><span  v-else> Nuevo</span><br>
                             <span class="badge badge-secondary">Stock </span> <span class="quantity-box"> {{quantity}}</span> 
                         </div>
                     </div>
@@ -88,7 +88,8 @@
 export default {
     props:[ 'name', 'description', 'quantity', 
             'price', 'image1', 'image2', 'product_id',
-            'created', 'is_new', 'seller', 'provincia', 'localidad'],
+            'created', 'is_new', 'seller', 'provincia', 'localidad',
+            'marca'],
     data(){
         return{
             seller_data: JSON.parse(this.seller)

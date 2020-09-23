@@ -61,7 +61,8 @@
                             <label for="provincia" class="col-md-4 col-form-label text-md-right">Provincia</label>
 
                             <div class="col-md-6">                               
-                                <select name="provincia" id="provincias">
+                                <select name="provincia" id="provincias" class="form-search" >
+                                    <option disabled selected>Selecciona Provincia</option>
                                     @foreach ($provincias as $provincia)
                                       <option value="{{$provincia->nombre}}">{{$provincia->nombre}}</option> 
                                     @endforeach
@@ -71,10 +72,10 @@
                         </div>
                         {{-- ---------------------------CUIDAD------------------ --}}
                         <div class="form-group row">
-                            <label for="provincia" class="col-md-4 col-form-label text-md-right">Provincia</label>
+                            <label for="localidad" class="col-md-4 col-form-label text-md-right">Localidad</label>
 
                             <div class="col-md-6">                               
-                                <select name="ciudad" id="ciudad">
+                                <select name="localidad" id="ciudad" class="form-search">
                                    
                                 </select>
                                
@@ -135,7 +136,7 @@ window.onload = function(){
             url: "/utils/" + $(this).val(),
             method: 'GET',
             success: function(data) {
-                $('#ciudad').html(data.html);    
+                $('#ciudad').html(data.html+"<option value='Otro'>Otro</option>");    
                 $("#ciudad").show();            
             }
         });

@@ -2028,7 +2028,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad'],
+  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca'],
   data: function data() {
     return {
       seller_data: JSON.parse(this.seller)
@@ -38438,13 +38438,15 @@ var render = function() {
                 _c("span", { staticClass: "badge badge-secondary" }, [
                   _vm._v("Marca ")
                 ]),
-                _vm._v(" Samsung"),
+                _vm._v(" " + _vm._s(_vm.marca)),
                 _c("br"),
                 _vm._v(" "),
                 _c("span", { staticClass: "badge badge-secondary" }, [
                   _vm._v("Condicion ")
                 ]),
-                _vm._v(" Nuevo"),
+                _vm.is_new == 0
+                  ? _c("span", [_vm._v(" Usado")])
+                  : _c("span", [_vm._v(" Nuevo")]),
                 _c("br"),
                 _vm._v(" "),
                 _c("span", { staticClass: "badge badge-secondary" }, [
