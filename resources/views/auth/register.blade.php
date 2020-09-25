@@ -153,7 +153,8 @@
 window.onload = function(){
     $("#ciudad").hide();
     $("#provincias").change(function(){
-        $.ajax({            
+        $.ajax({        
+            // --- convierte provincias.val en un array para enviar solo el item 0    
             url: "/utils/" + $(this).val().split(',')[0],
             method: 'GET',
             success: function(data) {
