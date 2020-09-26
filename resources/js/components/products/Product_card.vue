@@ -1,19 +1,19 @@
 <template>
-    <div class="ccard efect" >
-        <div class="">
+    <div class="ccard efect wo-pad" >
+        
             <div class="row top">
                 <div class="col">
                     <a v-bind:href="product_id"><img class="card-img-top" :src="image" alt="Card image cap"></a>
                 </div>
             </div>
             <div class="row ">
-                <div class="col text-center data">
-                    {{name}}
+                <div class="col text-center ">
+                    <p class="data">{{name}}</p>
                 </div>
                 
             </div>
             
-        </div>
+        
 
    
     </div>
@@ -50,12 +50,21 @@ export default {
 }
 .efect{
     box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);
+
 }
 .data{
     max-width: 100%;
+    margin-top: 10px;
+    padding: 0%;
+    vertical-align: bottom;
+}
+.wo-pad{
+    padding-bottom: 0;
 }
 .data:hover{
-    box-sizing: border-box;
     background-color: orangered;
+    transition: all 0.5;
+    border-radius: 4px;
 }
+
 </style>

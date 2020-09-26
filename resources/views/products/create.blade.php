@@ -20,6 +20,20 @@
                                 <input type="text" class="form-control form-search" name="titulo" value="" required autocomplete="titulo" autofocus>                               
                             </div>
                         </div>
+                        {{-- --------------CATEGORIA---------------- --}}
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Categoria</label>
+                        
+                            <div class="col-md-6">
+                                <select name="categoria" id="" class="form-search">
+                                    <option disabled selected>Selecciona Categoria</option>
+                                    @foreach ($categorias as $cat)
+                                    <option value="{{$cat->id}}">{{$cat->nombre}}</option>
+                                        
+                                    @endforeach
+                                    </select>          
+                            </div>
+                        </div>
                         <!-- ---------------------MARCA -->
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Marca</label>

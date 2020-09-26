@@ -8,6 +8,7 @@ use App\Product;
 use App\User;
 use App\Localidad;
 use App\Provincia;
+use App\Categoria;
 
 
 class ProductsController extends Controller
@@ -30,8 +31,10 @@ class ProductsController extends Controller
     public function create()
     {
         if (Auth::check()) {
+
+            $categorias = Categoria::all();
             
-            return view('products.create');
+            return view('products.create', compact('categorias'));
         }
         else
         {
@@ -59,6 +62,7 @@ class ProductsController extends Controller
         $producto->marca = $request->input('marca');
         $producto->modelo = $request->input('modelo');
         $producto->origen = $request->input('origen');
+        $producto->categoria_id = $request->input('categoria');
         $producto->seller_id = Auth::id();
         $producto->save();
         
@@ -77,8 +81,9 @@ class ProductsController extends Controller
         $seller = User::find($product->seller_id);
         $provincia = Provincia::find($seller->id_provincia);
         $localidad = Localidad::find($seller->localidad);
+        $categoria = Categoria::find($product->categoria_id);
         
-        return view('products.show', compact('product','seller', 'provincia', 'localidad'));
+        return view('products.show', compact('product','seller', 'provincia', 'localidad', 'categoria'));
     }
 
     /**

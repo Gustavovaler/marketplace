@@ -16,8 +16,12 @@
                         </div>
                         <div class="col-md-6">
                             <span class="badge badge-secondary">Marca </span> {{marca}}<br>
+                            <hr>
                             <span class="badge badge-secondary">Condicion </span><span v-if="is_new == 0 "> Usado</span><span  v-else> Nuevo</span><br>
-                            <span class="badge badge-secondary">Stock </span> <span class="quantity-box"> {{quantity}}</span> 
+                            <hr>
+                            <span class="badge badge-secondary">Stock </span> <span class="quantity-box"> {{quantity}}</span><br> 
+                            <hr>
+                            <span class="badge badge-secondary">Categoria </span> <span class="quantity-box"> {{categoria}}</span> 
                         </div>
                     </div>
                     <!-- MIDDLE CONTENT ROW -->
@@ -89,7 +93,7 @@ export default {
     props:[ 'name', 'description', 'quantity', 
             'price', 'image1', 'image2', 'product_id',
             'created', 'is_new', 'seller', 'provincia', 'localidad',
-            'marca'],
+            'marca', 'categoria'],
     data(){
         return{
             seller_data: JSON.parse(this.seller)

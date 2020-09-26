@@ -14,6 +14,7 @@
          seller = "{{$seller}}"
          provincia = "{{$provincia->nombre}}"
          localidad ="{{$localidad->nombre}}"
+         categoria = "{{$categoria->nombre}}"
          marca = "{{$product->marca}}"
 ></product-detail>
     

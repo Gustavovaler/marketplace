@@ -2027,8 +2027,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca'],
+  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca', 'categoria'],
   data: function data() {
     return {
       seller_data: JSON.parse(this.seller)
@@ -6543,7 +6547,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.price[data-v-0fb606e0]{\r\n    text-align: right;\n}\n.efect[data-v-0fb606e0]{\r\n    box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);\n}\n.data[data-v-0fb606e0]{\r\n    max-width: 100%;\n}\n.data[data-v-0fb606e0]:hover{\r\n    box-sizing: border-box;\r\n    background-color: orangered;\n}\r\n", ""]);
+exports.push([module.i, "\n.price[data-v-0fb606e0]{\r\n    text-align: right;\n}\n.efect[data-v-0fb606e0]{\r\n    box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);\n}\n.data[data-v-0fb606e0]{\r\n    max-width: 100%;\r\n    margin-top: 10px;\r\n    padding: 0%;\r\n    vertical-align: bottom;\n}\n.wo-pad[data-v-0fb606e0]{\r\n    padding-bottom: 0;\n}\n.data[data-v-0fb606e0]:hover{\r\n    background-color: orangered;\r\n    transition: all 0.5;\r\n    border-radius: 4px;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38441,6 +38445,8 @@ var render = function() {
                 _vm._v(" " + _vm._s(_vm.marca)),
                 _c("br"),
                 _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
                 _c("span", { staticClass: "badge badge-secondary" }, [
                   _vm._v("Condicion ")
                 ]),
@@ -38449,12 +38455,25 @@ var render = function() {
                   : _c("span", [_vm._v(" Nuevo")]),
                 _c("br"),
                 _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
                 _c("span", { staticClass: "badge badge-secondary" }, [
                   _vm._v("Stock ")
                 ]),
                 _vm._v(" "),
                 _c("span", { staticClass: "quantity-box" }, [
                   _vm._v(" " + _vm._s(_vm.quantity))
+                ]),
+                _c("br"),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("span", { staticClass: "badge badge-secondary" }, [
+                  _vm._v("Categoria ")
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "quantity-box" }, [
+                  _vm._v(" " + _vm._s(_vm.categoria))
                 ])
               ])
             ]),
@@ -38610,23 +38629,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "ccard efect" }, [
-    _c("div", {}, [
-      _c("div", { staticClass: "row top" }, [
-        _c("div", { staticClass: "col" }, [
-          _c("a", { attrs: { href: _vm.product_id } }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: { src: _vm.image, alt: "Card image cap" }
-            })
-          ])
+  return _c("div", { staticClass: "ccard efect wo-pad" }, [
+    _c("div", { staticClass: "row top" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("a", { attrs: { href: _vm.product_id } }, [
+          _c("img", {
+            staticClass: "card-img-top",
+            attrs: { src: _vm.image, alt: "Card image cap" }
+          })
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row " }, [
-        _c("div", { staticClass: "col text-center data" }, [
-          _vm._v("\n                " + _vm._s(_vm.name) + "\n            ")
-        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row " }, [
+      _c("div", { staticClass: "col text-center " }, [
+        _c("p", { staticClass: "data" }, [_vm._v(_vm._s(_vm.name))])
       ])
     ])
   ])
