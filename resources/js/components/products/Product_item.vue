@@ -3,7 +3,7 @@
         <div class="col-md-9 offset-3">
             <div class="card">
                 <div class="card-body">
-                    <img :src="foto" alt="" class="thumb">
+                    <a :href="'/products/'+id"><img :src="foto" alt="" class="thumb"></a>
                     <span class="titulo">{{titulo}}  </span><span class="precio">$ {{price}}</span>
                 </div>
             </div>           
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    props: ['titulo','foto', 'price']
+    props: ['titulo','foto', 'price', 'id']
 }
 </script>
 <style scoped>
@@ -22,11 +22,11 @@ export default {
     /* background: pink; */
 }
 .thumb{
-    width: 75px;
+    width: 90px;
 }
 .titulo{
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    /* font-weight: bold; */
     padding-left: 10px;
 }
 .precio{

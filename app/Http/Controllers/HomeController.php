@@ -15,11 +15,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $n_art_home = 8;
         $numbers = [];
         $products_raw = Product::all();
         $products = [];
         // elijo numeros de productos al azar en cada request
-        for ($i=0; $i < 5; $i++) { 
+        for ($i=0; $i < $n_art_home; $i++) { 
            $n = rand(1, count($products_raw)-1);
         //    cotejo que el numero no este repetido
            if (in_array($n, $numbers)) {

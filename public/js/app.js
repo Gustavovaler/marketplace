@@ -2119,7 +2119,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['titulo', 'foto', 'price']
+  props: ['titulo', 'foto', 'price', 'id']
 });
 
 /***/ }),
@@ -6594,7 +6594,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.row[data-v-3ed24313]{\r\n    /* background: pink; */\n}\n.thumb[data-v-3ed24313]{\r\n    width: 75px;\n}\n.titulo[data-v-3ed24313]{\r\n    font-size: 1.2rem;\r\n    font-weight: bold;\r\n    padding-left: 10px;\n}\n.precio[data-v-3ed24313]{\r\n    font-size: 1.5rem ;\r\n    font-style: bolder;\r\n    float: right;\r\n    margin-right: 10px;\r\n    vertical-align: middle;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.row[data-v-3ed24313]{\r\n    /* background: pink; */\n}\n.thumb[data-v-3ed24313]{\r\n    width: 90px;\n}\n.titulo[data-v-3ed24313]{\r\n    font-size: 1rem;\r\n    /* font-weight: bold; */\r\n    padding-left: 10px;\n}\n.precio[data-v-3ed24313]{\r\n    font-size: 1.5rem ;\r\n    font-style: bolder;\r\n    float: right;\r\n    margin-right: 10px;\r\n    vertical-align: middle;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38751,10 +38751,12 @@ var render = function() {
     _c("div", { staticClass: "col-md-9 offset-3" }, [
       _c("div", { staticClass: "card" }, [
         _c("div", { staticClass: "card-body" }, [
-          _c("img", {
-            staticClass: "thumb",
-            attrs: { src: _vm.foto, alt: "" }
-          }),
+          _c("a", { attrs: { href: "/products/" + _vm.id } }, [
+            _c("img", {
+              staticClass: "thumb",
+              attrs: { src: _vm.foto, alt: "" }
+            })
+          ]),
           _vm._v(" "),
           _c("span", { staticClass: "titulo" }, [
             _vm._v(_vm._s(_vm.titulo) + "  ")

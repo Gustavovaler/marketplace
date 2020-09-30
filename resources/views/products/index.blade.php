@@ -9,6 +9,7 @@
     price = "{{$product->price}}"
     foto = "{{$product->image1}}"
     is_new = "{{$product->is_new}}"
+    id = "{{$product->id}}"
     {{-- provincia = "{{$provincia->nombre}}" --}}
     ></product-item>
 @endforeach
