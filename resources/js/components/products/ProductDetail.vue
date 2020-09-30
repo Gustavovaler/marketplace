@@ -22,6 +22,8 @@
                             <span class="badge badge-secondary">Stock </span> <span class="quantity-box"> {{quantity}}</span><br> 
                             <hr>
                             <span class="badge badge-secondary">Categoria </span> <span class="quantity-box"> {{categoria}}</span> 
+                             <hr>
+                            <span class="badge badge-secondary">Vistas </span> <span class="quantity-box"> {{vistas}}</span> 
                         </div>
                     </div>
                     <!-- MIDDLE CONTENT ROW -->
@@ -93,7 +95,7 @@ export default {
     props:[ 'name', 'description', 'quantity', 
             'price', 'image1', 'image2', 'product_id',
             'created', 'is_new', 'seller', 'provincia', 'localidad',
-            'marca', 'categoria'],
+            'marca', 'categoria', 'vistas'],
     data(){
         return{
             seller_data: JSON.parse(this.seller)

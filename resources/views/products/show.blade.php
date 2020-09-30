@@ -5,6 +5,7 @@
          name = "{{$product->product_name}}"
          description = "{{$product->description}}"
          quantity = "{{$product->quantity}}"
+         vistas = "{{$product->visits}}"
          price = "{{$product->price}}"
          image1 = "{{$product->image1}}"
          image2 = "{{$product->image2}}"
@@ -16,6 +17,5 @@
          localidad ="{{$localidad->nombre}}"
          categoria = "{{$categoria->nombre}}"
          marca = "{{$product->marca}}"
-></product-detail>
-    
+></product-detail>    
 @endsection

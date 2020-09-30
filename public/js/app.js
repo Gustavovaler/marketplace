@@ -2031,8 +2031,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca', 'categoria'],
+  props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca', 'categoria', 'vistas'],
   data: function data() {
     return {
       seller_data: JSON.parse(this.seller)
@@ -38550,6 +38552,16 @@ var render = function() {
                 _vm._v(" "),
                 _c("span", { staticClass: "quantity-box" }, [
                   _vm._v(" " + _vm._s(_vm.categoria))
+                ]),
+                _vm._v(" "),
+                _c("hr"),
+                _vm._v(" "),
+                _c("span", { staticClass: "badge badge-secondary" }, [
+                  _vm._v("Vistas ")
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "quantity-box" }, [
+                  _vm._v(" " + _vm._s(_vm.vistas))
                 ])
               ])
             ]),

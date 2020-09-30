@@ -78,7 +78,14 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
+         try {
+             //code...
+         } catch (\Throwable $th) {
+             //throw $th;
+         }
         $product = Product::find($id);
+        $product->visits ++;
+        $product->save();
         $seller = User::find($product->seller_id);
         $provincia = Provincia::find($seller->id_provincia);
         $localidad = Localidad::find($seller->localidad);
