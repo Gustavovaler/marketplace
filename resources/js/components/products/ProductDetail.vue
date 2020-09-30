@@ -44,8 +44,8 @@
                             <div class="subtitle">
                                 <h5>Descripción</h5>
                             </div>
-                          <p>
-                              {{description}}
+                          <p v-html="description">
+                             
                           </p>
 
                         </div>

@@ -1,14 +1,13 @@
 <template>
-    <div class="row">
-        <div class="col-md-9 offset-3">
+    
             <div class="card">
                 <div class="card-body">
                     <a :href="'/products/'+id"><img :src="foto" alt="" class="thumb"></a>
                     <span class="titulo">{{titulo}}  </span><span class="precio">$ {{price}}</span>
                 </div>
             </div>           
-        </div>   
-    </div>
+          
+    
 </template>
 
 <script>

@@ -2117,7 +2117,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['titulo', 'foto', 'price', 'id']
 });
@@ -38587,13 +38586,7 @@ var render = function() {
               _c("div", { staticClass: "col-md-12 p-2 " }, [
                 _vm._m(0),
                 _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                          " +
-                      _vm._s(_vm.description) +
-                      "\n                      "
-                  )
-                ])
+                _c("p", { domProps: { innerHTML: _vm._s(_vm.description) } })
               ])
             ]),
             _vm._v(" "),
@@ -38747,25 +38740,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "col-md-9 offset-3" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("a", { attrs: { href: "/products/" + _vm.id } }, [
-            _c("img", {
-              staticClass: "thumb",
-              attrs: { src: _vm.foto, alt: "" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "titulo" }, [
-            _vm._v(_vm._s(_vm.titulo) + "  ")
-          ]),
-          _c("span", { staticClass: "precio" }, [
-            _vm._v("$ " + _vm._s(_vm.price))
-          ])
-        ])
-      ])
+  return _c("div", { staticClass: "card" }, [
+    _c("div", { staticClass: "card-body" }, [
+      _c("a", { attrs: { href: "/products/" + _vm.id } }, [
+        _c("img", { staticClass: "thumb", attrs: { src: _vm.foto, alt: "" } })
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "titulo" }, [
+        _vm._v(_vm._s(_vm.titulo) + "  ")
+      ]),
+      _c("span", { staticClass: "precio" }, [_vm._v("$ " + _vm._s(_vm.price))])
     ])
   ])
 }

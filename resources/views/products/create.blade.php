@@ -109,6 +109,12 @@
                                   <textarea name="descripcion" id="" cols="30" rows="6" class="form-control form-search"></textarea>              
                             </div>
                         </div>
+                        
+                            <script type="text/javascript">
+                            tinymce.init({
+                                selector: "textarea"
+                            });
+                            </script>
                         {{-- -----------BOTON ENVIAR --}}
                         <div class="form-group row">
                             <div class="col-md-6 offset-4">
