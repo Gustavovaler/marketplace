@@ -24,6 +24,8 @@
                             <span class="badge badge-secondary">Categoria </span> <span class="quantity-box"> {{categoria}}</span> 
                              <hr>
                             <span class="badge badge-secondary">Vistas </span> <span class="quantity-box"> {{vistas}}</span> 
+                             <hr>
+                            <span class="alert alert-danger" v-if="disponibility > 0"> Disponible para retirar en {{disponibility}} dias</span> <span class="alert alert-success" v-else>Disponible para retirar en el acto.</span>
                         </div>
                     </div>
                     <!-- MIDDLE CONTENT ROW -->
@@ -95,7 +97,7 @@ export default {
     props:[ 'name', 'description', 'quantity', 
             'price', 'image1', 'image2', 'product_id',
             'created', 'is_new', 'seller', 'provincia', 'localidad',
-            'marca', 'categoria', 'vistas'],
+            'marca', 'categoria', 'vistas', 'disponibility'],
     data(){
         return{
             seller_data: JSON.parse(this.seller)

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-md-3">
             <h1>Algo va aca</h1>
         </div>
@@ -30,7 +30,11 @@
 
 
 </div>
-
+<div class="row mt-4">
+    <div class="col">
+         <footer-comp></footer-comp>   
+    </div>
+</div>
 
 
     

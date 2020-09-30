@@ -17,6 +17,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('product-card', require('./components/products/Product_card.vue').default);
 Vue.component('product-item', require('./components/products/Product_item.vue').default);
 Vue.component('product-detail', require('./components/products/ProductDetail.vue').default);
+Vue.component('footer-comp', require('./components/Footer.vue').default);
+
 const app = new Vue({
     el: '#app',
 });

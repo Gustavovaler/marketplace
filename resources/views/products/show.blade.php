@@ -4,6 +4,7 @@
 <product-detail
          name = "{{$product->product_name}}"
          description = "{{$product->description}}"
+         disponibility = "{{$product->disp}}"
          quantity = "{{$product->quantity}}"
          vistas = "{{$product->visits}}"
          price = "{{$product->price}}"
@@ -17,5 +18,10 @@
          localidad ="{{$localidad->nombre}}"
          categoria = "{{$categoria->nombre}}"
          marca = "{{$product->marca}}"
-></product-detail>    
+></product-detail> 
+<div class="row mt-4">
+    <div class="col">
+         <footer-comp></footer-comp>   
+    </div>
+</div>   
 @endsection

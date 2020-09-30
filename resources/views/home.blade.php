@@ -19,4 +19,12 @@
         @endforeach      
 
     </div>
+</div>
+<div class="row mt-4">
+    <div class="col">
+         <footer-comp></footer-comp>   
+    </div>
+</div>
+
 @endsection
+
