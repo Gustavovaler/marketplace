@@ -29446,7 +29446,7 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Abasto",
+            "nombre":"Agronomia",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29495,7 +29495,7 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Pompeya",
+            "nombre":"Parque Chas",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29531,13 +29531,13 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Microcentro",
+            "nombre":"Montserrat",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
         },
         {
-            "nombre":"Villareal",
+            "nombre":"Villa Real",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29561,7 +29561,7 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Congreso",
+            "nombre":"La Boca",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29573,7 +29573,7 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Lugano",
+            "nombre":"Villa Lugano",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29615,7 +29615,7 @@ $municipios_json ='
             }
         },
         {
-            "nombre":"Barrio Norte",
+            "nombre":"Boedo",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
@@ -29628,6 +29628,120 @@ $municipios_json ='
         },
         {
             "nombre":"Villa Crespo",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Almagro",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Chacarita",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Coghlan",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"La Paternal",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Monte Castro",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Nueva Pompeya",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Nuñez",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Recoleta",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Retiro",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Velez Sarfield",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Versalles",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Crespo",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Gral.Mitre",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Luro",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Ortúzar",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Riachuelo",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Sta.Rita",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Villa Soldati",
+            "provincia":{
+                "nombre": "Ciudad Autónoma de Buenos Aires"
+            }
+        },
+        {
+            "nombre":"Microcentro",
             "provincia":{
                 "nombre": "Ciudad Autónoma de Buenos Aires"
             }
