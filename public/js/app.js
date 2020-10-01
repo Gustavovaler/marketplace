@@ -6603,7 +6603,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.main[data-v-61a7c374]{\r\n    width: 100%;\r\n    min-height: 150px;\r\n    background-color: orangered;\n}\n.content[data-v-61a7c374]{\r\n    background-color: rgb(37, 37, 37);\r\n    color: orangered;\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n.main[data-v-61a7c374]{\r\n    width: 100%;\r\n    min-height: 150px;\r\n    background-color: orangered;\n}\n.content[data-v-61a7c374]{\r\n    background-color: rgb(37, 37, 37);\r\n    color: orangered;\n}\nul[data-v-61a7c374]{\r\n    list-style: none;\n}\r\n\r\n\r\n", ""]);
 
 // exports
 

@@ -78,11 +78,6 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-         try {
-             //code...
-         } catch (\Throwable $th) {
-             //throw $th;
-         }
         $product = Product::find($id);
         $product->visits ++;
         $product->save();

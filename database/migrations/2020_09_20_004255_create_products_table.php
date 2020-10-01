@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('quantity')->default(1);
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();
-            $table->float('price');
+            $table->bigInteger('price');
             $table->boolean('is_new')->default(1);
             $table->unsignedBigInteger('seller_id');
             $table->foreign('seller_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

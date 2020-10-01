@@ -44,6 +44,9 @@ export default {
     background-color: rgb(37, 37, 37);
     color: orangered;
 }
+ul{
+    list-style: none;
+}
 
 
 </style>
