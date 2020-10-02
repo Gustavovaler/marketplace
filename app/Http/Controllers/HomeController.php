@@ -29,7 +29,8 @@ class HomeController extends Controller
            }
             array_push($numbers, $n);
             $products[$i] = $products_raw[$n];
-        }        
+        }   
+             
         return view('home', compact('products'));
     }
 }

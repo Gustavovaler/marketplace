@@ -11,7 +11,7 @@
                 <product-item
                 titulo = "{{$product->product_name}}"
                 price = "{{$product->price}}"
-                foto = "{{$product->image1}}"
+                foto = "{{asset('/storage/'.$product->image1)}}"
                 is_new = "{{$product->is_new}}"
                 id = "{{$product->id}}"
                 {{-- provincia = "{{$provincia->nombre}}" --}}

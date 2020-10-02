@@ -87,3 +87,40 @@ $f4 = imagejpeg($imagenx4,$imagen4);
 
 
 }
+// public function store(Request $request)
+// {
+// 	$producto = new Product();
+// 	$producto->product_name = $request->input('titulo');
+// 	$producto->description = $request->input('descripcion');
+// 	$producto->quantity = $request->input('cantidad');       
+// 	$producto->price = $request->input('precio');
+// 	$producto->is_new = $request->input('condicion');
+// 	$producto->marca = $request->input('marca');
+// 	$producto->modelo = $request->input('modelo');
+// 	$producto->origen = $request->input('origen');
+// 	$producto->categoria_id = $request->input('categoria');
+// 	$producto->seller_id = Auth::id();
+
+   
+		
+// 	if ($request->file('imagen1') != null) {
+// 		$imagen1 = $request->file('imagen1');
+// 		$imagen1_nombre = time().'.'.$imagen1->getClientOriginalExtension();
+// 		$destino = public_path('/images');
+// 		$path = Storage::putFile('images', $imagen1);
+// 		//$imagen1->move($destino, $imagen1_nombre);
+// 		$producto->image1 = $path;
+// 	}
+	
+// 	if ($request->file('imagen2') != null) {
+// 		$imagen2 = $request->file('imagen2');
+// 		$imagen2_nombre = time().'.'.$imagen2->getClientOriginalExtension();
+// 		$destino2 = public_path('/images');
+// 		$imagen2->move($destino2, $imagen2_nombre);
+// 		$producto->image2 = '/images/'.$imagen2_nombre;
+// 	}
+	
+// 	$producto->save();
+	
+// 	return redirect('/');
+// }

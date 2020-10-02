@@ -14,7 +14,7 @@
             description = "{{$product->description}}"
             price = "{{$product->price}}"
             product_id = "/products/{{$product->id}}"
-            image = "{{$product->image1}}"
+            image = "{{asset('/storage/'.$product->image1)}}"
             > </product-card>
          </div>  
         @endforeach      
