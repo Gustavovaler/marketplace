@@ -2,6 +2,7 @@
 
 @section('content')
 <div>
+    
     <img src="{{asset('/images/banner1.jpg')}}" alt="" style="margin: 0; width= 100%;" class="mb-3">
 </div>
 <div class="container">

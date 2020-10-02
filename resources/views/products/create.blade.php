@@ -10,7 +10,7 @@
                    <h3> Publica tu producto</h3>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{route('products.store')}}">
+                    <form method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
                         @csrf
                         <!-- -------------titulo -->
                         <div class="form-group row">
@@ -98,7 +98,7 @@
                             <label for="imagen2" class="col-md-4 col-form-label text-md-right">Imagen</label>
                         
                             <div class="col-md-6">
-                                <input type="file" class="form-control form-search" name="imagen2"  required autocomplete="imagen2" autofocus>                                                 
+                                <input type="file" class="form-control form-search" name="imagen2"   autocomplete="imagen2" autofocus>                                                 
                             </div>
                         </div>
                         <!-- -------------------------DESCRIPCION     -->

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Product;
@@ -55,9 +55,7 @@ class ProductsController extends Controller
         $producto = new Product();
         $producto->product_name = $request->input('titulo');
         $producto->description = $request->input('descripcion');
-        $producto->quantity = $request->input('cantidad');
-        $producto->image1 = $request->input('imagen1');
-        $producto->image2 = $request->input('imagen2');
+        $producto->quantity = $request->input('cantidad');       
         $producto->price = $request->input('precio');
         $producto->is_new = $request->input('condicion');
         $producto->marca = $request->input('marca');
@@ -65,6 +63,25 @@ class ProductsController extends Controller
         $producto->origen = $request->input('origen');
         $producto->categoria_id = $request->input('categoria');
         $producto->seller_id = Auth::id();
+    
+       
+            
+        if ($request->file('imagen1') != null) {
+            $imagen1 = $request->file('imagen1');
+            $imagen1_nombre = time().'.'.$imagen1->getClientOriginalExtension();
+            $destino = public_path('/images');
+            $imagen1->move($destino, $imagen1_nombre);
+            $producto->image1 = '/images/'.$imagen1_nombre;
+        }
+        
+        if ($request->file('imagen2') != null) {
+            $imagen2 = $request->file('imagen2');
+            $imagen2_nombre = time().'.'.$imagen2->getClientOriginalExtension();
+            $destino2 = public_path('/images');
+            $imagen2->move($destino2, $imagen2_nombre);
+            $producto->image2 = '/images/'.$imagen2_nombre;
+        }
+        
         $producto->save();
         
         return redirect('/');
