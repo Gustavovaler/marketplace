@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Product;
@@ -9,6 +8,7 @@ use App\User;
 use App\Localidad;
 use App\Provincia;
 use App\Categoria;
+use Image;
 
 
 class ProductsController extends Controller
@@ -44,6 +44,7 @@ class ProductsController extends Controller
         }
     }
 
+ 
     /**
      * Store a newly created resource in storage.
      *
@@ -62,21 +63,26 @@ public function store(Request $request)
 	$producto->modelo = $request->input('modelo');
 	$producto->origen = $request->input('origen');
 	$producto->categoria_id = $request->input('categoria');
-	$producto->seller_id = Auth::id();
-
-   
-		
+    $producto->seller_id = Auth::id();
+    
+    $path_storage = storage_path().'/app/public/images/';
+    
 	if ($request->file('imagen1') != null) {
-		$imagen1 = $request->file('imagen1');		
-		$path = $imagen1->store('images');
-		$producto->image1 = $path;
+        $imagen1 = $request->file('imagen1');
+        $img = Image::make($imagen1->getPathName());
+        $img_name = time().$imagen1->getClientOriginalName();	
+		$img->save($path_storage.$img_name);
+        $producto->image1 = '/images/'.$img_name;       
 	}
 	
 	if ($request->file('imagen2') != null) {
-		$imagen2 = $request->file('imagen2');		
-		$path = $imagen2->store('images');       
-        $producto->image2 = $path;
+        $imagen2 = $request->file('imagen2');
+        $img2 = Image::make($imagen2->getPathName());
+        $img_name2 = time().$imagen2->getClientOriginalName();	
+		$img2->save($path_storage.$img_name2);
+        $producto->image2 = '/images/'.$img_name2;       
 	}
+	
 	
 	$producto->save();
 	
@@ -135,4 +141,7 @@ public function store(Request $request)
     {
         //
     }
+
+
+
 }

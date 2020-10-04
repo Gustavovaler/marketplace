@@ -1,0 +1,1 @@
+ancho =420 -- alto = 236\nancho =690 -- alto = 719\nancho =675 -- alto = 1200\n
