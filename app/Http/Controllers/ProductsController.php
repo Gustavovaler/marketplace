@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use App\Product;
 use App\User;
 use App\Localidad;
@@ -157,7 +158,8 @@ public function store(Request $request)
      */
     public function edit($id)
     {
-        //
+    $product = Product::find($id);
+       return view('products.edit', compact('product'));
     }
 
     /**
@@ -180,7 +182,18 @@ public function store(Request $request)
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $img1 = $product->image1;
+        $img2 = $product->image2;
+        if($img1 != null){
+            Storage::delete($img1);
+        }
+        if($img2 != null){
+            Storage::delete($img2);
+        }
+        $product->delete();
+        
+        return redirect('/');
     }
 
 
