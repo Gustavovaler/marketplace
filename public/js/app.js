@@ -2078,7 +2078,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['name', 'description', 'quantity', 'price', 'image1', 'image2', 'product_id', 'created', 'is_new', 'seller', 'provincia', 'localidad', 'marca', 'categoria', 'vistas', 'disponibility'],
   data: function data() {
@@ -38667,14 +38666,14 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row content-row" }, [
-              _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "col-md-7" }, [
                 _c("img", {
                   staticClass: "img-center",
                   attrs: { src: _vm.image1, alt: "" }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "col-md-5" }, [
                 _c("span", { staticClass: "badge badge-secondary" }, [
                   _vm._v("Marca ")
                 ]),
@@ -38742,17 +38741,7 @@ var render = function() {
               _c("div", { staticClass: "col-md-7 p-2 " }, [
                 _c("img", {
                   staticClass: "thumbnail",
-                  attrs: { src: _vm.image2, alt: "" }
-                }),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "thumbnail",
-                  attrs: { src: _vm.image2, alt: "" }
-                }),
-                _vm._v(" "),
-                _c("img", {
-                  staticClass: "thumbnail",
-                  attrs: { src: _vm.image2, alt: "" }
+                  attrs: { src: _vm.image1, alt: "" }
                 }),
                 _vm._v(" "),
                 _c("img", {

@@ -10,7 +10,7 @@ use App\Localidad;
 use App\Provincia;
 use App\Categoria;
 use Image;
-
+use PhpParser\Node\Expr\Cast\Object_;
 
 class ProductsController extends Controller
 {
@@ -19,10 +19,16 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(5);
-       return view('products.index',compact('products'));
+        $items = 5;
+        if ($request->number_items != null) {
+            $items = $request->number_items ;            
+        }
+        
+        $provincias = Provincia::orderBy('nombre', 'asc')->get();
+        $products = Product::paginate($items);
+        return view('products.index',compact('products', 'items', 'provincias'));
     }
 
     /**

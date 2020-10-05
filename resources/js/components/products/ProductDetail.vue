@@ -11,10 +11,10 @@
                     </div>
                     <!-- TOP CONTENT ROW -->
                     <div class="row content-row">
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <img v-bind:src="image1" alt="" class="img-center">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <span class="badge badge-secondary">Marca </span> {{marca}}<br>
                             <hr>
                             <span class="badge badge-secondary">Condicion </span><span v-if="is_new == 0 "> Usado</span><span  v-else> Nuevo</span><br>
@@ -31,10 +31,9 @@
                     <!-- MIDDLE CONTENT ROW -->
                     <div class="row content-row">
                         <div class="col-md-7 p-2 ">
+                            <img v-bind:src="image1" alt="" class="thumbnail">
                             <img v-bind:src="image2" alt="" class="thumbnail">
-                            <img v-bind:src="image2" alt="" class="thumbnail">
-                            <img v-bind:src="image2" alt="" class="thumbnail">
-                            <img v-bind:src="image2" alt="" class="thumbnail">
+                            
 
                         </div>
                         <div class="col-md-5">
