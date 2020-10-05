@@ -24,7 +24,33 @@
                     @endforeach
                 </select>
                 <br> 
-                <input type="submit" value="Actualizar" class="" style="background-color: orangered; color: white;border-radius: 5px; margin:10px 0px 0px 50px">            </form>
+                <input type="submit" value="Actualizar" class="" style="background-color: orangered; color: white;border-radius: 5px; margin:10px 0px 0px 50px"> 
+           </form>
+
+           <br>
+            <hr>
+            <form action="/products" method="GET">
+                <span>Ordenar por</span>
+                <br>
+
+                <select name="ordenamiento" id="ordenamiento">
+                    <option value="">Mas relevante</option>
+                    <option value="">Menor precio</option>
+                    <option value="">Mas nuevo</option>
+                </select>
+                <br>
+                <input type="submit" value="Actualizar" class="" style="background-color: orangered; color: white;border-radius: 5px; margin:10px 0px 0px 50px"> 
+            </form>
+            <br>
+            <hr>
+            <form action="/products" method="get">
+                <span>Rango de precio</span><br>
+                <span>Minimo-Maximo</span><br>
+                <input type="number" min=0 placeholder="0" style="width: 80px;">
+                <input type="number" min=0 placeholder="0" style="width: 80px;">
+                <input type="submit" value="Actualizar" class="" style="background-color: orangered; color: white;border-radius: 5px; margin:10px 0px 0px 50px"> 
+            </form>
+
         </div>
         <div class="col-md-9 ">
             @foreach ($products as $product)
