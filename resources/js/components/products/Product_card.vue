@@ -58,6 +58,7 @@ export default {
     margin-top: 10px;
     padding: 0%;
     vertical-align: bottom;
+    min-height: 3rem;
 }
 .wo-pad{
     padding-bottom: 0;

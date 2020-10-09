@@ -2,6 +2,7 @@
 
 @section('content')
 <link rel="stylesheet" href="{{asset('css/perfil.css')}}">
+
 <div class="container">
     {{-- ---------------Publicaciones----- --}}
     <div class="mt-2">
@@ -9,7 +10,8 @@
             <div class="col-md-12">
                <div class="card">
                 <div class="card-header">
-                    <h5>Publicaciones</h5>
+                <h5 class="section-title">Publicaciones <span class="num-badge">({{count($publicaciones)}})</span></h5>
+                    <span class="btn bot" id="bot">ver</span>
                 </div>
                 @if ($publicaciones == null)
                 <div class="container">
@@ -18,7 +20,7 @@
                 @else 
                 <div class="row">
                     
-                    <div class="col-md-10">
+                    <div class="col-md-10" id="items">
                          @foreach ($publicaciones as $publicacion)
                     <product-item
                     titulo = "{{$publicacion->product_name}}"
@@ -26,7 +28,6 @@
                     foto = "{{asset('/storage/'.$publicacion->image1)}}"
                     is_new = "{{$publicacion->is_new}}"
                     id = "{{$publicacion->id}}"
-                    {{-- provincia = "{{$provincia->nombre}}" --}}
                     ></product-item>
                         
                 @endforeach
@@ -132,4 +133,14 @@
     <footer-comp></footer-comp>
 </div>
     
+@endsection
+@section('scripts')
+<script>
+     $(document).ready(function(){
+       $('#bot').click(function(){
+           $('#items').toggle(200);
+       })
+     });
+</script>
+   
 @endsection
