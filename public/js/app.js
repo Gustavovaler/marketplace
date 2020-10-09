@@ -6659,7 +6659,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.row[data-v-3ed24313]{\r\n    /* background: pink; */\n}\n.thumb[data-v-3ed24313]{\r\n    width: 90px;\n}\n.titulo[data-v-3ed24313]{\r\n    font-size: 1rem;\r\n    /* font-weight: bold; */\r\n    padding-left: 10px;\n}\n.precio[data-v-3ed24313]{\r\n    font-size: 1.5rem ;\r\n    font-style: bolder;\r\n    float: right;\r\n    margin-right: 10px;\r\n    vertical-align: middle;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.thumb[data-v-3ed24313]{\r\n    width: 90px;\n}\n.titulo[data-v-3ed24313]{\r\n    font-size: 1rem;\r\n    /* font-weight: bold; */\r\n    padding-left: 10px;\r\n    color: black;\r\n    -webkit-text-decoration-line: none;\r\n            text-decoration-line: none;\r\n    -webkit-text-decoration-style: none;\r\n            text-decoration-style: none;\n}\n.precio[data-v-3ed24313]{\r\n    font-size: 1.5rem ;\r\n    font-style: bolder;\r\n    float: right;\r\n    margin-right: 10px;\r\n    vertical-align: middle;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38919,9 +38919,11 @@ var render = function() {
         _c("img", { staticClass: "thumb", attrs: { src: _vm.foto, alt: "" } })
       ]),
       _vm._v(" "),
-      _c("span", { staticClass: "titulo" }, [
-        _vm._v(_vm._s(_vm.titulo) + "  ")
-      ]),
+      _c(
+        "a",
+        { staticClass: "titulo", attrs: { href: "/products/" + _vm.id } },
+        [_vm._v(_vm._s(_vm.titulo) + "  ")]
+      ),
       _c("span", { staticClass: "precio" }, [_vm._v("$ " + _vm._s(_vm.price))])
     ])
   ])

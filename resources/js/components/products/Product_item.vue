@@ -3,7 +3,7 @@
             <div class="card">
                 <div class="card-body">
                     <a :href="'/products/'+id"><img :src="foto" alt="" class="thumb"></a>
-                    <span class="titulo">{{titulo}}  </span><span class="precio">$ {{price}}</span>
+                    <a  :href="'/products/'+id" class="titulo">{{titulo}}  </a><span class="precio">$ {{price}}</span>
                 </div>
             </div>           
           
@@ -17,9 +17,6 @@ export default {
 </script>
 <style scoped>
 
-.row{
-    /* background: pink; */
-}
 .thumb{
     width: 90px;
 }
@@ -27,7 +24,12 @@ export default {
     font-size: 1rem;
     /* font-weight: bold; */
     padding-left: 10px;
+    color: black;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    
 }
+
 .precio{
     font-size: 1.5rem ;
     font-style: bolder;
