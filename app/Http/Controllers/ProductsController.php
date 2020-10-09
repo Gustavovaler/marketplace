@@ -73,6 +73,7 @@ public function store(Request $request)
     $producto->seller_id = Auth::id();
     
     $path_storage = storage_path().'/app/public/images/';
+    $thumb_storage = storage_path().'/app/public/thumbnails/';
     $canvas = Image::canvas(800,800, '#fff');
 
     if ($request->file('imagen1') != null) {
@@ -100,8 +101,11 @@ public function store(Request $request)
         
         
         $img_name = time().$imagen1->getClientOriginalName();	
-		$canvas->save($path_storage.$img_name);
-        $producto->image1 = '/images/'.$img_name;       
+        $canvas->save($path_storage.$img_name);
+        $canvas->resize(100,100);
+        $canvas->save($thumb_storage.'thumb_'.$img_name);
+        $producto->image1 = '/images/'.$img_name;    
+        $producto->thumbnail_1 = '/thumbnails/thumb_'.$img_name;     
     } 
 // -------------------------imagen2 
      $canvas2 = Image::canvas(800,800, '#fff');
@@ -193,6 +197,7 @@ public function store(Request $request)
         $img2 = $product->image2;
         if($img1 != null){
             Storage::delete($img1);
+            
         }
         if($img2 != null){
             Storage::delete($img2);

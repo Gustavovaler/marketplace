@@ -2130,6 +2130,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "product-card",
   props: ['name', 'description', 'price', 'product_id', 'image'],
@@ -38886,7 +38887,9 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "row " }, [
       _c("div", { staticClass: "col text-center " }, [
-        _c("p", { staticClass: "data" }, [_vm._v(_vm._s(_vm.name))])
+        _c("p", { staticClass: "data" }, [_vm._v(_vm._s(_vm.name))]),
+        _vm._v(" "),
+        _c("p", [_vm._v("$ " + _vm._s(_vm.price))])
       ])
     ])
   ])

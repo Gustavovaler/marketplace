@@ -1,14 +1,26 @@
-.ventas{
-    background: silver;
+
+
+
+.card{
+    border: 1px solid orangered;
 }
 
-.publicaciones{
-    background: skyblue;
-}
-.confianza{
-    background: tan;
+.card-header{
+    padding: 10px 10px 5px 10px;
+    border-bottom:1px dashed rgb(112, 108, 108);
 }
 
-.compras{
-    background: papayawhip;
+.mercadopago-header{
+    background-color: #009ee3 ;
 }
+.mercadopago-header h5{
+    color: white;
+    font-weight: bold;
+    margin-left: 50px;
+    text-shadow: 1px 2px 2px #000000;
+}
+.mercadopago-card{
+    border:1px solid #045d83;
+}
+
+

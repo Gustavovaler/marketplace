@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
+use App\Product;
 class PerfilController extends Controller
 {
     /**
@@ -45,9 +46,13 @@ class PerfilController extends Controller
      */
     public function show($id)
     {
+        $ventas = [];
+        $confianza = null;
+        $publicaciones = Product::where('seller_id', $id)->get();
+        $compras = null;
         $user = User::find($id);
         if (Auth::id() == $id) {
-             return view('perfil.show', compact('user'));
+             return view('perfil.show', compact('user', 'ventas', 'confianza', 'publicaciones','compras'));
         }else{
             return redirect('/');
         }

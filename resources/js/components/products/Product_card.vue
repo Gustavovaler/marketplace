@@ -9,6 +9,7 @@
             <div class="row ">
                 <div class="col text-center ">
                     <p class="data">{{name}}</p>
+                    <p>$ {{price}}</p>
                 </div>
                 
             </div>
