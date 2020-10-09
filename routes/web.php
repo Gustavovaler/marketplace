@@ -24,13 +24,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('/products', 'ProductsController');
 
+Route::resource('/perfil', 'PerfilController')->middleware('auth');
+
 Route::get('/utils/{provincia}', 'UtilsController@get_localidades');
 
-Route::get('/image', function(){
-
-    $img = Image::make(public_path().'/images/auto1.jpg');
-    $img->resize(100,100);
-    $img->save(storage_path().'/app/public/images/auto.jpg');
-
-    return "helo";
-} ); 
