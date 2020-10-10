@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\User;
 use App\Role;
+use App\Permission;
 
 Auth::routes();
 
@@ -31,8 +32,20 @@ Route::resource('/perfil', 'PerfilController')->middleware('auth');
 
 Route::get('/utils/{provincia}', 'UtilsController@get_localidades');
 
-Route::get('/test', function(){
+// Route::get('/test', function(){
 
-    $user = User::find(1)->roles()->sync([1]);
+//     $role = User::find(1);
+
+//     //$role->permissions()->sync([1,2]);
     
-});
+//     return $role;
+
+//     // return Permission::create([
+//     //     'name' => 's',
+//     //     'slug' => 'products.index',
+//     //     'description' => 'User can to view List prodcts',
+//     // ]);
+    
+
+    
+// });

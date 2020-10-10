@@ -83,13 +83,13 @@ public function store(Request $request)
             $img->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $canvas->insert($img, 'top-left', 0, (800 - $img->height())/2);
+            $canvas->insert($img, 'top-left', 0, intval((800 - $img->height())/2));
         }
         if ($img->height() > $img->width() ) {
             $img->resize(null, 800, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $canvas->insert($img, 'top-left',(800 - $img->width())/2 ,0 );
+            $canvas->insert($img, 'top-left',intval((800 - $img->width())/2) ,0 );
         }
 
         if ($img->width() == $img->height()) {
@@ -116,13 +116,13 @@ public function store(Request $request)
             $img2->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $canvas2->insert($img2, 'top-left', 0, (800 - $img2->height())/2);
+            $canvas2->insert($img2, 'top-left', 0, intval((800 - $img2->height())/2));
         }
         if ($img2->height() > $img2->width() ) {
             $img2->resize(null, 800, function ($constraint) {
                 $constraint->aspectRatio();
             });
-            $canvas2->insert($img2, 'top-left',(800 - $img2->width())/2 ,0 );
+            $canvas2->insert($img2, 'top-left',intval((800 - $img2->width())/2),0);
         }
         if ($img2->width() == $img2->height()) {
             $img2->resize(800, null, function ($constraint) {
@@ -131,9 +131,13 @@ public function store(Request $request)
            $canvas2->insert($img2, 'top-left', 0,0);
        }       
         
-        $img_name2 = time().$imagen2->getClientOriginalName();	
-		$canvas2->save($path_storage.$img_name2);
-        $producto->image2 = '/images/'.$img_name2;       
+         
+       $img_name2 = time().$imagen2->getClientOriginalName();	
+       $canvas2->save($path_storage.$img_name2);
+       $canvas2->resize(100,100);
+       $canvas2->save($thumb_storage.'thumb_'.$img_name2);
+       $producto->image2 = '/images/'.$img_name2;    
+       $producto->thumbnail_2 = '/thumbnails/thumb_'.$img_name2;     
     } 	
 	
 	$producto->save();
