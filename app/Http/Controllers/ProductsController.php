@@ -196,8 +196,7 @@ public function store(Request $request)
         $img1 = $product->image1;
         $img2 = $product->image2;
         if($img1 != null){
-            Storage::delete($img1);
-            
+            Storage::delete($img1);            
         }
         if($img2 != null){
             Storage::delete($img2);

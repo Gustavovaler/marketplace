@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
+use App\User;
+use App\Role;
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -28,3 +31,8 @@ Route::resource('/perfil', 'PerfilController')->middleware('auth');
 
 Route::get('/utils/{provincia}', 'UtilsController@get_localidades');
 
+Route::get('/test', function(){
+
+    $user = User::find(1)->roles()->sync([1]);
+    
+});
