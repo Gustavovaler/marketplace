@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class MercadoPagoController extends Controller
 {
     public function seller_auth_form(){
-        return "seller_auth_form";
+        return view('vendedores.autorizar_form');
     }
 
     public function get_link_up_code(){
@@ -15,8 +15,8 @@ class MercadoPagoController extends Controller
     }
 
     public function get_seller_credentials(){
-        return "este retorna las credenciales";
+        return response(201);
     }
 
-    
+
 }
