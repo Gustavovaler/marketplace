@@ -17,7 +17,13 @@
                 <select name="provincias" id="provincias">
                     <option value="" selected disabled>Todas</option>
                     <option value="">A.M.B.A</option>
+                   
                     @foreach ($provincias as $provincia)
+
+                    @if ($provincia->nombre == "Ciudad Autónoma de Buenos Aires")
+                    <option value="{{$provincia->nombre}},{{$provincia->id}}" >C.A.B.A</option> 
+                        @continue
+                    @endif
                     
                 <option value="{{$provincia->nombre}}">{{$provincia->nombre}}</option>
                         

@@ -6641,7 +6641,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.price[data-v-0fb606e0]{\r\n    text-align: right;\n}\n.efect[data-v-0fb606e0]{\r\n    box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);\n}\n.data[data-v-0fb606e0]{\r\n    max-width: 100%;\r\n    margin-top: 10px;\r\n    padding: 0%;\r\n    vertical-align: bottom;\r\n    min-height: 3rem;\n}\n.wo-pad[data-v-0fb606e0]{\r\n    padding-bottom: 0;\n}\n.data[data-v-0fb606e0]:hover{\r\n    background-color: orangered;\r\n    transition: all 0.5;\r\n    border-radius: 4px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.price[data-v-0fb606e0]{\r\n    text-align: right;\n}\n.efect[data-v-0fb606e0]{\r\n    box-shadow: 1px 5px 5px rgba(0, 0, 0, .4);\n}\n.data[data-v-0fb606e0]{\r\n    max-width: 100%;\r\n    margin-top: 10px;\r\n    padding: 0%;\r\n    vertical-align: bottom;\r\n    height: 3rem;\n}\n.wo-pad[data-v-0fb606e0]{\r\n    padding-bottom: 0;\n}\n.data[data-v-0fb606e0]:hover{\r\n    background-color: orangered;\r\n    transition: all 0.5;\r\n    border-radius: 4px;\n}\r\n\r\n", ""]);
 
 // exports
 

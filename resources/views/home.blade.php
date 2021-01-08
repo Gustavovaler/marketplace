@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{asset('css/home.css')}}">
 <div>
     
-    <img src="{{asset('/images/banner1.jpg')}}" alt="" style="margin: 0; width= 100%;" class="mb-3">
+    <img src="{{asset('/images/banner1.jpg')}}" alt="banner1" class="mb-3" id="banner">
 </div>
 <div class="container">
     <div class="row">
