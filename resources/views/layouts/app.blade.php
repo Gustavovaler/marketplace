@@ -51,11 +51,13 @@
                         </li>
                         <li >
                             <!-- Search form -->
+                           
                                 <div class="active-pink-7 ">
                                   
                                     <input class="form-control form-search" type="text" placeholder="Buscar" aria-label="Search">
-                                    
+                                   
                                 </div>
+                            
                             <!-- Search form -->
                         </li>
                         
@@ -66,11 +68,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Ingresar</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">Registrarme</a>
                                 </li>
                             @endif
                         @else

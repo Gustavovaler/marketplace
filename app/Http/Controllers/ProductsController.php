@@ -21,6 +21,11 @@ class ProductsController extends Controller
      */
     public function index(Request $request)
     {
+
+        if ($request->search !=null) {
+            echo "request";
+        }
+
         $items = 5;
         if ($request->number_items != null) {
             $items = $request->number_items ;            
