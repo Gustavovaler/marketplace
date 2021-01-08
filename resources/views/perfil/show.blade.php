@@ -121,7 +121,7 @@
                     <h5>MERCADOPAGO</h5>
                 </div>
                 <div class="card-body">
-                    Proximamente podrás cobrar con MercadoPago.
+                   <a href="{{url('vendedores/autorizar')}}" class="btn btn-primary float-right">Comenzar a operar con Mercadopago</a> 
                 </div>
                 
                </div> 
