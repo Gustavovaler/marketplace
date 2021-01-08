@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Localidad;
+use App\Models\Localidad;
 
 class UtilsController extends Controller
 {

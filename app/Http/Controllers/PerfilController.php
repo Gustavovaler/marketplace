@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\User;
-use App\Product;
+use App\Models\User;
+use App\Models\Product;
 class PerfilController extends Controller
 {
     /**

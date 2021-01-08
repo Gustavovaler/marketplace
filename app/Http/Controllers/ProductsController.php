@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use App\Product;
-use App\User;
-use App\Localidad;
-use App\Provincia;
-use App\Categoria;
+use App\Models\Product;
+use App\Models\User;
+use App\Models\Localidad;
+use App\Models\Provincia;
+use App\Models\Categoria;
 use Image;
 use PhpParser\Node\Expr\Cast\Object_;
 
