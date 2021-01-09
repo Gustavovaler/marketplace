@@ -105,9 +105,8 @@ public function store(Request $request)
         }
         
         
-        $img_name = time().$imagen1->getClientOriginalName();
-
-        $canvas->save('/storage/app/public/images/'.$img_name);
+        $img_name = time().$imagen1->getClientOriginalName();	
+        $canvas->save($path_storage.$img_name);
         $canvas->resize(100,100);
         $canvas->save($thumb_storage.'thumb_'.$img_name);
         $producto->image1 = '/images/'.$img_name;    
